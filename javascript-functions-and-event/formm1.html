@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Feedback Form</title>
+
+<script>
+
+function submitform(){
+window.alert(" Thank You For Your Feedback !!!")
+}
+
+</script>
+
+</head>
+<body>
+    <h1>Mike's Kitchen Restaurant</h1>
+    <p>Please share your feedback with us</p>
+    
+    <form action="/submit-feedback" method="post">
+        <label for="name">Name & Surname:</label>
+        <input type="text" id="name" name="name" required><br><br>
+<br><br>
+  <label for="homeaddress">Home Address:</label>
+        <input type="address" id="address" name="address" required><br><br>
+
+<label for="streetname">Street Name:</label>
+        <input type="streetname" id="streetname" name="streetname" required><br><br>
+
+<label for="surbub">Surbub:</label>
+        <input type="surbub" id="surbub" name="surbub" required><br><br>
+<label for="postalcode">Postal Code:</label>
+        <input type="postalcode" id="postalcode" name="postalcode" required><br><br>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+<br><br>
+
+  <label for="year">Year:</label>
+        <input type="year" id="year" name="year" required><br><br>
+
+
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select><br><br>
+
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea><br><br>
+        
+        <label for="visit_again">Would you visit again?</label><br>
+        <input type="radio" id="yes" name="visit_again" value="Yes" required>
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="visit_again" value="No" required>
+        <label for="no">No</label><br><br>
+
+        <input type="button" value="Submit Feedback" onclick="submitform()"/>
+    </form>
+</body>
+</html>
