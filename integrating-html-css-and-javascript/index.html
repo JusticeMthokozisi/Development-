@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Developer Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero {
+            background-image: url('https://via.placeholder.com/1600x800');
+            background-size: cover;
+            color: white;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+        }
+
+        #calculator-form input,
+        #calculator-form select {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">MTHOKOZISI DEVELOPMENT</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1>MTHOKOZISI PORTFOLIO</h1>
+            <p>I am a passionate web developer</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container py-5">
+        <h2 class="text-center">Services</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="web2.jpg" class="card-img-top" alt="Web Development">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text">I create responsive and modern websites using the latest technologies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="webdevelopment.pnj.jpg" class="card-img-top" alt="Web Design">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Design</h5>
+                        <p class="card-text">I design user-friendly and visually appealing web interfaces.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="licensed-image.jpg" class="card-img-top" alt="SEO Services">
+                    <div class="card-body">
+                        <h5 class="card-title">SEO Services</h5>
+                        <p class="card-text">I optimize websites to ensure better visibility in search engines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Calculator Section -->
+    <section id="calculator" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Web Development Price Calculator</h2>
+            <form id="calculator-form" class="row">
+                <div class="col-md-4">
+                    <label for="projectType" class="form-label">Project Type</label>
+                    <select id="projectType" class="form-select">
+                        <option value="500">Basic Website</option>
+                        <option value="1000">E-commerce Website</option>
+                        <option value="1500">Custom Web Application</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="pages" class="form-label">Number of Pages</label>
+                    <input type="number" id="pages" class="form-control" min="1" value="1">
+                </div>
+                <div class="col-md-4">
+                    <label for="features" class="form-label">Additional Features</label>
+                    <select id="features" class="form-select">
+                        <option value="0">None</option>
+                        <option value="200">Blog</option>
+                        <option value="300">Contact Form</option>
+                        <option value="500">Live Chat</option>
+                    </select>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <button type="button" class="btn btn-primary w-100" onclick="calculatePrice()">Calculate Price</button>
+                </div>
+            </form>
+
+            <div id="result" class="mt-4">
+                <h4>Total Price: $<span id="totalPrice">0</span></h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container py-5">
+        <h2 class="text-center">Contact</h2>
+        <p class="text-center">Feel free to reach out for collaborations or projects.</p>
+        <form id="contact-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 MTHOKOZISI PORTFOLIO</p>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- Custom JS -->
+    <script>
+        // Price Calculation Function
+        function calculatePrice() {
+            const projectType = parseInt(document.getElementById('projectType').value);
+            const pages = parseInt(document.getElementById('pages').value);
+            const features = parseInt(document.getElementById('features').value);
+
+            // Calculate total price
+            const totalPrice = (projectType + (pages * 50) + features).toFixed(2);
+
+            // Display the total price
+            document.getElementById('totalPrice').innerText = totalPrice;
+        }
+    </script>
+</body>
+
+</html>
